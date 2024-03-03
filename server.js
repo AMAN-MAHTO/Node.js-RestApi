@@ -5,6 +5,7 @@ const userRoutes = require("./routes/UserRoutes");
 const errorHandler = require("./middleware/errorHandler");
 const connectDb = require('./config/dbConnection');
 const fs = require("fs");
+const marked = require("marked");
 
 // connecting to mongo db
 connectDb();
@@ -22,7 +23,8 @@ app.get("/",(req, res) => {
         return;
       }
       // Send the documentation content as response
-      res.send(data);
+      const htmlData = marked.parser(marked.lexer(data));
+      res.send(htmlData);
     });
   })
 app.use("/api/contacts",contactRoutes);
