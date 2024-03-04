@@ -5,10 +5,6 @@ This project is a backend built with **Node.js** utilizing **MongoDB** for datab
 
 This documentation provides information about the endpoints and functionalities of the Manage Contacts Rest API.
 
-## Hosted API URL
-
-https://node-js-restapi-jzu4.onrender.com
-
 ## User Endpoints
 
 ### Register a New User
